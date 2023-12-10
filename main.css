@@ -32,7 +32,7 @@ body {
         0 0 50px #f4b10a,
         0 0 100px #f4b10a;
     animation: animate 15s linear infinite;
-    animation-duration: calc(110s/var(--i));
+    animation-duration: calc(70s/var(--i));
 }
 
 .bubbles span:nth-child(even){
