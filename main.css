@@ -22,6 +22,7 @@ body {
 }
 
 .bubbles span {
+    filter: drop-shadow(0 0 2rem rgba(220, 20, 60, 0.8));
     position: relative;
     width: 30px;
     height: 30px;
@@ -36,6 +37,7 @@ body {
 }
 
 .bubbles span:nth-child(even){
+    filter: drop-shadow(0 0 2rem rgba(220, 20, 60, 0.8));
     background: #ff0016;
     box-shadow: 0 0 0 10px #ff6425,
         0 0 50px #ff0016,
