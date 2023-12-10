@@ -248,3 +248,6 @@ body {
 .box form input[type="submit"]:active {
     opacity: 0.8;
 }
+.ScrollBar{
+    overflow: scroll;
+}
