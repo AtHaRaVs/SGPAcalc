@@ -248,6 +248,18 @@ body {
 .box form input[type="submit"]:active {
     opacity: 0.8;
 }
-.ScrollBar{
+.ScrollBar {
     overflow: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: transparent transparent; /* For Firefox, set to transparent color */
+
+    /* For WebKit (Chrome, Safari) */
+    &::-webkit-scrollbar {
+        width: 5px; /* Adjust the width as needed */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent; /* Set thumb color to transparent */
+    }
 }
