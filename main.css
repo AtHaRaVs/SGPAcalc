@@ -263,3 +263,11 @@ body {
         background-color: transparent; /* Set thumb color to transparent */
     }
 }
+.arrow {
+    color: white;
+    display: inline;
+    font-size:20px;
+    margin-left: 320px;
+
+
+  }
