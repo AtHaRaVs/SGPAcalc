@@ -436,10 +436,20 @@ a {
     color: white;
     font-size: 25px;
     padding: 20px;
-    margin-top: 40px;
+    margin-top: 20px;
     text-align: center;
+}
 
+.grades p{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+}
 
+.grades hr{
+    max-width: 200px;
+    max-height: 100px;
 }
 
 .logo {
