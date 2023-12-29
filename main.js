@@ -1,7 +1,27 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     var submitButton = document.getElementById("submit");
 
-    submitButton.addEventListener("click", function() {
+    var scrollForm = document.querySelector('.ScrollBar');
+    var arrow = document.querySelector('.arrow');
+
+    // Function to handle scroll event
+    function handleScroll() {
+        if (scrollForm.scrollTop > 0) {
+            // If scrolled down, hide the arrow
+            arrow.style.opacity = '0';
+        } else {
+            // If at the top, show the arrow
+            arrow.style.opacity = '1';
+        }
+    }
+
+    // Add scroll event listener to the scrollForm
+    scrollForm.addEventListener('scroll', handleScroll);
+
+    // Initial check to hide/show arrow based on initial scroll position
+    handleScroll();
+
+    submitButton.addEventListener("click", function () {
         event.preventDefault();
         var weights = {
             'OS': 3,
@@ -18,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var total = 0;
         var isError = false;
 
-        document.querySelectorAll('.inputBox input').forEach(function(input) {
+        document.querySelectorAll('.inputBox input').forEach(function (input) {
             var subjectId = input.parentNode.id;
             var grade = input.value.toUpperCase();
 
