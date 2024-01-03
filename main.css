@@ -501,7 +501,9 @@ a {
   position: fixed;
   bottom: 10px;
   left: 10px;
+  z-index: 999; /* Adjust the value as needed */
 }
+
 @media only screen and (max-width: 600px) {
   .box,
   .box1 {
