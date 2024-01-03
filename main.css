@@ -238,7 +238,7 @@ body {
 .box form .inputBox {
   position: relative;
   width: 300px;
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 .box form .inputBox input {
@@ -508,7 +508,6 @@ a {
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
-
     position: absolute;
     z-index: 1;
   }
