@@ -7,14 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Toast
   // Check if the user is on a mobile device based on viewport width
   if (window.innerWidth <= 600) {
-    // Get the close button element
-    var closeButton = document.getElementById("closeFullscreenToast");
-
-    // Add a click event listener to hide the fullscreen toast
-    closeButton.addEventListener("click", function () {
-      hideFullscreenToast();
-    });
-
     // Add a click event listener to hide the fullscreen toast when clicked
     var fullscreenToast = document.getElementById("fullscreenToast");
     fullscreenToast.addEventListener("click", function () {
