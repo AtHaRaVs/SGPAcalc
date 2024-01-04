@@ -49,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
       SN: 2,
       AP: 1,
       PROJECT: 2,
-      ST: 2,
       GP: 1,
     };
 
@@ -77,14 +76,16 @@ document.addEventListener("DOMContentLoaded", function () {
         total += parseFloat(gradeValues[grade]) * weights[subjectId];
       } else {
         isError = true;
-        alert("Error: Please enter valid grades for all subjects.");
+        alert(
+          "Error: Please enter valid grades for all subjects. Reload the page to continue"
+        );
         return;
       }
     });
 
     if (!isError) {
       // Perform the final calculation in floating-point arithmetic
-      var finalResult = total / 20.0;
+      var finalResult = total / 18.0;
 
       // Display the result
       document.querySelector(".ScrollBar").scrollTop = 0;
