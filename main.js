@@ -55,33 +55,42 @@ document.addEventListener("DOMContentLoaded", function () {
     var total = 0;
     var isError = false;
 
-    document.querySelectorAll(".inputBox input").forEach(function (input) {
-      var subjectId = input.parentNode.id;
-      var grade = input.value.toUpperCase();
+    var isError = false;
 
-      var gradeValues = {
-        "A+": 10,
-        A: 9,
-        "B+": 8,
-        B: 7,
-        "C+": 6,
-        C: 5,
-        "D+": 4,
-        D: 3,
-        E: 2,
-      };
+    try {
+      document.querySelectorAll(".inputBox input").forEach(function (input) {
+        var subjectId = input.parentNode.id;
+        var grade = input.value.toUpperCase();
 
-      if (gradeValues.hasOwnProperty(grade)) {
-        // Use parseFloat to convert grades to numeric values
-        total += parseFloat(gradeValues[grade]) * weights[subjectId];
-      } else {
-        isError = true;
-        alert(
-          "Error: Please enter valid grades for all subjects. Reload the page to continue"
-        );
-        return;
+        var gradeValues = {
+          "A+": 10,
+          A: 9,
+          "B+": 8,
+          B: 7,
+          "C+": 6,
+          C: 5,
+          "D+": 4,
+          D: 3,
+          E: 2,
+        };
+
+        if (gradeValues.hasOwnProperty(grade)) {
+          // Use parseFloat to convert grades to numeric values
+          total += parseFloat(gradeValues[grade]) * weights[subjectId];
+        } else {
+          isError = true;
+          throw new Error("Error: Please enter valid grades for all subjects.");
+        }
+      });
+
+      if (isError) {
+        // This code won't be reached if an error occurs
       }
-    });
+
+      // Continue with the rest of your code if no error occurred
+    } catch (error) {
+      alert(error.message);
+    }
 
     if (!isError) {
       // Perform the final calculation in floating-point arithmetic
