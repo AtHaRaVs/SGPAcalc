@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Toast
   // Check if the user is on a mobile device based on viewport width
-  if (window.innerWidth <= 600 && isMobile) {
+  if (window.innerWidth <= 800 && isMobile) {
     // Add a click event listener to hide the fullscreen toast when clicked
     var fullscreenToast = document.getElementById("fullscreenToast");
     fullscreenToast.addEventListener("click", function () {

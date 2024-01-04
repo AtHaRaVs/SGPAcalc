@@ -541,6 +541,7 @@ a {
   justify-content: center;
   flex-direction: column;
   z-index: 1000;
+  text-align: justify;
 }
 
 .close-btn {
