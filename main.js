@@ -3,10 +3,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var scrollForm = document.querySelector(".ScrollBar");
   var arrow = document.querySelector(".arrow");
+  const isMobile =
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
 
   // Toast
   // Check if the user is on a mobile device based on viewport width
-  if (window.innerWidth <= 600) {
+  if (window.innerWidth <= 600 && isMobile) {
     // Add a click event listener to hide the fullscreen toast when clicked
     var fullscreenToast = document.getElementById("fullscreenToast");
     fullscreenToast.addEventListener("click", function () {
