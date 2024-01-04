@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var arrow = document.querySelector(".arrow");
 
   // Toast
-  // Check if the user is on a mobile device
-  if (/Mobi|Android/i.test(navigator.userAgent)) {
+  // Check if the user is on a mobile device based on viewport width
+  if (window.innerWidth <= 600) {
     // Get the close button element
     var closeButton = document.getElementById("closeFullscreenToast");
 
@@ -14,8 +14,14 @@ document.addEventListener("DOMContentLoaded", function () {
     closeButton.addEventListener("click", function () {
       hideFullscreenToast();
     });
+
+    // Add a click event listener to hide the fullscreen toast when clicked
+    var fullscreenToast = document.getElementById("fullscreenToast");
+    fullscreenToast.addEventListener("click", function () {
+      hideFullscreenToast();
+    });
   } else {
-    // If not on a mobile device, hide the fullscreen toast
+    // If not on a mobile-sized viewport, hide the fullscreen toast
     hideFullscreenToast();
   }
 
