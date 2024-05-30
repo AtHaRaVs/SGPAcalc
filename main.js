@@ -42,16 +42,17 @@ document.addEventListener("DOMContentLoaded", function () {
   submitButton.addEventListener("click", function () {
     event.preventDefault();
     var weights = {
-      OS: 3,
-      DAA: 4,
-      AIML: 4,
-      "SN-LAB": 1,
-      SN: 2,
-      AP: 1,
+      MAD: 3,
+      PBLJ: 3,
+      QM: 4,
+      "CC-LAB": 1,
+      CC: 2,
+      TOC: 3,
       PROJECT: 2,
       GP: 1,
+      AP:1,
+      EWDM:2,
     };
-
     var total = 0;
     var isError = false;
 
@@ -94,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!isError) {
       // Perform the final calculation in floating-point arithmetic
-      var finalResult = total / 18.0;
+      var finalResult = total / 22.0;
 
       // Display the result
       document.querySelector(".ScrollBar").scrollTop = 0;
